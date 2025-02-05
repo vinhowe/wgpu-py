@@ -522,6 +522,10 @@ class GPU(classes.GPU):
             # not used: adapterType
             # not used: vendorID
             # not used: deviceID
+            # FIXME: unknown C struct field WGPUAdapterInfo.subgroupMinSize
+            # not used: subgroupMinSize
+            # FIXME: unknown C struct field WGPUAdapterInfo.subgroupMaxSize
+            # not used: subgroupMaxSize
         )
 
         # H: void f(WGPUAdapter adapter, WGPUAdapterInfo * info)

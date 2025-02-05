@@ -2,8 +2,8 @@
 ## Preparing
 * The webgpu.idl defines 37 classes with 75 functions
 * The webgpu.idl defines 5 flags, 34 enums, 60 structs
-* The wgpu.h defines 199 functions
-* The wgpu.h defines 7 flags, 52 enums, 93 structs
+* The wgpu.h defines 204 functions
+* The wgpu.h defines 7 flags, 52 enums, 94 structs
 ## Updating API
 * Wrote 5 flags to flags.py
 * Wrote 34 enums to enums.py
@@ -18,11 +18,12 @@
 * Diffs for GPUTextureView: add size, add texture
 * Diffs for GPUBindingCommandsMixin: change set_bind_group
 * Diffs for GPUQueue: add read_buffer, add read_texture, hide copy_external_image_to_texture
-* Validated 37 classes, 121 methods, 46 properties
+* Validated 37 classes, 121 methods, 48 properties
 ### Patching API for backends/wgpu_native/_api.py
 * Validated 37 classes, 121 methods, 0 properties
 ## Validating backends/wgpu_native/_api.py
 * Enum field FeatureName.texture-compression-bc-sliced-3d missing in wgpu.h
+* Enum field FeatureName.subgroups missing in wgpu.h
 * Enum field FeatureName.clip-distances missing in wgpu.h
 * Enum field FeatureName.dual-source-blending missing in wgpu.h
 * Enum PipelineErrorReason missing in wgpu.h
@@ -36,5 +37,7 @@
 * Enum CanvasToneMappingMode missing in wgpu.h
 * Wrote 236 enum mappings and 47 struct-field mappings to wgpu_native/_mappings.py
 * Validated 142 C function calls
-* Not using 64 C functions
+* Not using 69 C functions
+* ERROR: unknown C struct field WGPUAdapterInfo.subgroupMinSize
+* ERROR: unknown C struct field WGPUAdapterInfo.subgroupMaxSize
 * Validated 82 C structs

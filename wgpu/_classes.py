@@ -536,6 +536,18 @@ class GPUAdapterInfo:
         """A textual description of the adapter."""
         return self._info["description"]
 
+    # IDL: readonly attribute unsigned long subgroupMinSize;
+    @property
+    def subgroup_min_size(self):
+        """The minimum size of a subgroup."""
+        return self._info["subgroup_min_size"]
+
+    # IDL: readonly attribute unsigned long subgroupMaxSize;
+    @property
+    def subgroup_max_size(self):
+        """The maximum size of a subgroup."""
+        return self._info["subgroup_max_size"]
+
 
 class GPUAdapter:
     """Represents an abstract wgpu implementation.
